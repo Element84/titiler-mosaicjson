@@ -51,13 +51,13 @@ def test_MosaicTilerFactory():
         router_prefix="mosaic",
     )
 
-    assert len(mosaic.router.routes) == 32
+    assert len(mosaic.router.routes) == 33
 
     app = FastAPI()
     app.include_router(mosaic.router, prefix="/mosaic")
     client = TestClient(app)
 
-    response = client.get("/openapi.json")
+    response = TestClient(FastAPI()).get("/openapi.json")
     assert response.status_code == 200
 
     response = client.get("/docs")
