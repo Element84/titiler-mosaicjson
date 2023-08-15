@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/sh -ex
 
 rm -rf ./lambda ./lambda.zip
 
@@ -13,7 +13,11 @@ pip install --upgrade pip
 # https://github.com/aws/aws-sam-cli/issues/3661#issuecomment-1044340547
 
 python -m pip install \
-  --no-cache-dir --upgrade \
+  --no-cache-dir \
+  --platform manylinux2014_x86_64 \
+  --implementation cp \
+  --only-binary=:all: \
+  --upgrade \
   --target=./lambda/ \
   ./src/titiler/core \
   ./src/titiler/extensions["cogeo,stac"] \
@@ -29,10 +33,8 @@ python -m pip install \
 cd lambda
 
 echo "cleaning up..."
-find . -type f -name '*.pyc' | while read f; do n=$(echo $f | sed 's/__pycache__\///' | sed 's/.cpython-[2-3][0-9]//'); cp $f $n; done;
+find . -type d -a -name '*.dist-info' -print0 | xargs -0 rm -rf
 find . -type d -a -name '__pycache__' -print0 | xargs -0 rm -rf
-find . -type f -a -name '*.py' -print0 | xargs -0 rm -f
-find . -type d -a -name 'tests' -print0 | xargs -0 rm -rf
 
 echo "copying handler..."
 cp ../deployment/aws/lambda/handler.py .
