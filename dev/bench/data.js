@@ -1,6 +1,6 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1694092937885,
-  "repoUrl": "https://github.com/developmentseed/titiler",
+  "lastUpdate": 1694193279867,
+  "repoUrl": "https://github.com/Element84/titiler-mosaicjson",
   "entries": {
     "TiTiler performance Benchmarks": [
       {
@@ -1061,6 +1061,65 @@ window.BENCHMARK_DATA = {
           {
             "name": "WGS1984Quad longest_transaction",
             "value": 0.16,
+            "unit": "s"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "mbialas@element84.com",
+            "name": "MattBialas",
+            "username": "MattBialas"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "cb1e37c59c69bae5ebe51979e1e60068a3f3da1e",
+          "message": "Merge pull request #21 from Element84/merge-from-upstream-0.14.0\n\nMerge from upstream 0.14.0",
+          "timestamp": "2023-09-08T13:12:40-04:00",
+          "tree_id": "8da934ed6864d0c8ac7483c4177365ed089b7452",
+          "url": "https://github.com/Element84/titiler-mosaicjson/commit/cb1e37c59c69bae5ebe51979e1e60068a3f3da1e"
+        },
+        "date": 1694193278492,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "WebMercator data_transferred",
+            "value": 5.29,
+            "unit": "Megabytes"
+          },
+          {
+            "name": "WebMercator response_time",
+            "value": 0.05,
+            "unit": "s"
+          },
+          {
+            "name": "WebMercator longest_transaction",
+            "value": 0.08,
+            "unit": "s"
+          },
+          {
+            "name": "WGS1984Quad elapsed_time",
+            "value": 7.06,
+            "unit": "s"
+          },
+          {
+            "name": "WGS1984Quad data_transferred",
+            "value": 5.18,
+            "unit": "Megabytes"
+          },
+          {
+            "name": "WGS1984Quad response_time",
+            "value": 0.07,
+            "unit": "s"
+          },
+          {
+            "name": "WGS1984Quad longest_transaction",
+            "value": 0.1,
             "unit": "s"
           }
         ]
