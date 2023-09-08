@@ -98,74 +98,74 @@ jobs:
         # https://stackoverflow.com/questions/58177786/get-the-current-pushed-tag-in-github-actions
         run: echo ::set-output name=version::$(hatch --quiet version)
 
-      - name: Build and publish titiler packages
-        if: steps.tag.outputs.tag == steps.module.outputs.version
-        env:
-          TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
-          TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
-        run: |
-          scripts/publish
+      # - name: Build and publish titiler packages
+      #   if: steps.tag.outputs.tag == steps.module.outputs.version
+      #   env:
+      #     TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
+      #     TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+      #   run: |
+      #     scripts/publish
 
-  release:
-    needs: [tests]
-    name: Create GitHub Release
-    if: startsWith(github.event.ref, 'refs/tags/v')
-    runs-on: ubuntu-latest
-    outputs:
-      release_id: ${{ steps.create_release.outputs.id }}
-      upload_url: ${{ steps.create_release.outputs.upload_url }}
+  # release:
+  #   needs: [tests]
+  #   name: Create GitHub Release
+  #   if: startsWith(github.event.ref, 'refs/tags/v')
+  #   runs-on: ubuntu-latest
+  #   outputs:
+  #     release_id: ${{ steps.create_release.outputs.id }}
+  #     upload_url: ${{ steps.create_release.outputs.upload_url }}
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v3
 
-      - name: Get release tag name
-        id: tag
-        run: echo "tag=${GITHUB_REF##*/}" >> $GITHUB_OUTPUT
+  #     - name: Get release tag name
+  #       id: tag
+  #       run: echo "tag=${GITHUB_REF##*/}" >> $GITHUB_OUTPUT
 
-      - name: Create Draft Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ steps.tag.outputs.tag }}
-          release_name: ${{ steps.tag.outputs.tag }}
-          body_path: CHANGES.md
-          draft: true
-          prerelease: false
+  #     - name: Create Draft Release
+  #       id: create_release
+  #       uses: actions/create-release@v1
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #       with:
+  #         tag_name: ${{ steps.tag.outputs.tag }}
+  #         release_name: ${{ steps.tag.outputs.tag }}
+  #         body_path: CHANGES.md
+  #         draft: true
+  #         prerelease: false
 
-  build-lambda:
-    needs: [release]
-    name: Build Release Lambda
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+  # build-lambda:
+  #   needs: [release]
+  #   name: Build Release Lambda
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v3
 
-      - name: Set up Ubuntu
-        run: |
-          sudo apt-get update
-          sudo apt install -y --no-install-recommends zip
+  #     - name: Set up Ubuntu
+  #       run: |
+  #         sudo apt-get update
+  #         sudo apt install -y --no-install-recommends zip
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
+  #     - name: Set up Python
+  #       uses: actions/setup-python@v4
+  #       with:
+  #         python-version: '3.10'
 
-      - name: Run lambda build script
-        run: |
-          ./build-lambda.sh
+  #     - name: Run lambda build script
+  #       run: |
+  #         ./build-lambda.sh
 
-      - name: Upload Lambda Zip
-        uses: actions/upload-release-asset@v1.0.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ needs.release.outputs.upload_url }}
-          asset_path: lambda.zip
-          asset_name: lambda-python3.10.zip
-          asset_content_type: application/zip
+  #     - name: Upload Lambda Zip
+  #       uses: actions/upload-release-asset@v1.0.1
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #       with:
+  #         upload_url: ${{ needs.release.outputs.upload_url }}
+  #         asset_path: lambda.zip
+  #         asset_name: lambda-python3.10.zip
+  #         asset_content_type: application/zip
 
 
   # publish-docker:

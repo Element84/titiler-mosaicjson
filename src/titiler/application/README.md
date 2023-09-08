@@ -6,23 +6,25 @@
 ## Installation
 
 ```bash
-$ python -m pip install -U pip
+$ pip install -U pip
 
 # From Pypi
-$ python -m pip install titiler.application
+$ pip install titiler.application
 
 # Or from sources
 $ git clone https://github.com/developmentseed/titiler.git
-$ cd titiler && python -m pip install -e src/titiler/core -e src/titiler/extensions -e src/titiler/mosaic -e src/titiler/application
+$ cd titiler && pip install -e titiler/application
 ```
 
 Launch Application
 ```bash
-$ python -m pip install uvicorn
+$ pip install uvicorn
 $ uvicorn titiler.application.main:app --reload
 ```
 
 ## Package structure
+
+## SOME CHANGE
 
 ```
 titiler/
@@ -30,7 +32,9 @@ titiler/
     ├── tests/                   - Tests suite
     └── titiler/application/     - `application` namespace package
         ├── templates/
-        |   └── index.html       - Landing page
+        |   ├── index.html       - demo landing page
+        |   ├── cog_index.html   - demo viewer for `/cog`
+        |   └── stac_index.html  - demo viewer for `/stac`
         ├── main.py              - Main FastAPI application
         └── settings.py          - demo settings (cache, cors...)
 ```
