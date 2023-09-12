@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1694539651016,
+  "lastUpdate": 1694539804732,
   "repoUrl": "https://github.com/Element84/titiler-mosaicjson",
   "entries": {
     "TiTiler performance Benchmarks": [
@@ -1223,6 +1223,65 @@ window.BENCHMARK_DATA = {
           {
             "name": "WGS1984Quad elapsed_time",
             "value": 5.68,
+            "unit": "s"
+          },
+          {
+            "name": "WGS1984Quad data_transferred",
+            "value": 5.18,
+            "unit": "Megabytes"
+          },
+          {
+            "name": "WGS1984Quad response_time",
+            "value": 0.06,
+            "unit": "s"
+          },
+          {
+            "name": "WGS1984Quad longest_transaction",
+            "value": 0.07,
+            "unit": "s"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "bick4ord@users.noreply.github.com",
+            "name": "bick4ord",
+            "username": "bick4ord"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "f4aea532dfd5fe176e9f384f5c6db7f30532374a",
+          "message": "update github action versions to use newer versions of nodejs, removing warnings (#24)\n\n* update github action versions to use newer versions of nodejs, removing warnings",
+          "timestamp": "2023-09-12T13:28:29-04:00",
+          "tree_id": "e944feb925ad864cda72b98ff53edeedfc64efe4",
+          "url": "https://github.com/Element84/titiler-mosaicjson/commit/f4aea532dfd5fe176e9f384f5c6db7f30532374a"
+        },
+        "date": 1694539803674,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "WebMercator data_transferred",
+            "value": 5.29,
+            "unit": "Megabytes"
+          },
+          {
+            "name": "WebMercator response_time",
+            "value": 0.04,
+            "unit": "s"
+          },
+          {
+            "name": "WebMercator longest_transaction",
+            "value": 0.06,
+            "unit": "s"
+          },
+          {
+            "name": "WGS1984Quad elapsed_time",
+            "value": 5.62,
             "unit": "s"
           },
           {
