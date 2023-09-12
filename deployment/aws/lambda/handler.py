@@ -13,6 +13,7 @@ logging.getLogger("mangum.http").setLevel(logging.ERROR)
 REQUEST_HOST_HEADER_OVERRIDE_ENV_VAR = "REQUEST_HOST_HEADER_OVERRIDE"
 
 def handler(event, context):
+    """If env var is set, override the host header in the event passed to the lambda"""
     if rhh := os.getenv(REQUEST_HOST_HEADER_OVERRIDE_ENV_VAR):
         event["headers"]["host"] = rhh
 
