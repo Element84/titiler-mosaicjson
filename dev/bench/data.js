@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1694537279292,
+  "lastUpdate": 1694539651016,
   "repoUrl": "https://github.com/Element84/titiler-mosaicjson",
   "entries": {
     "TiTiler performance Benchmarks": [
@@ -1179,6 +1179,65 @@ window.BENCHMARK_DATA = {
           {
             "name": "WGS1984Quad longest_transaction",
             "value": 0.08,
+            "unit": "s"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "bick4ord@users.noreply.github.com",
+            "name": "bick4ord",
+            "username": "bick4ord"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "758720c04478e09303d17cccb30c584e18cf1f44",
+          "message": "add an optional env var config for mosaic lambda that will override t… (#22)\n\n* add an optional env var config for mosaic lambda that will override the host header in the event, so that responses crafted use the desired external-facing domain instead of internal API gateway\r\nCo-authored-by: Phil Varner <pvarner@element84.com>\r\n* Update deployment/aws/lambda/handler.py",
+          "timestamp": "2023-09-12T13:25:54-04:00",
+          "tree_id": "f7c8963d22c789d8f3944610b351ca4434b983d4",
+          "url": "https://github.com/Element84/titiler-mosaicjson/commit/758720c04478e09303d17cccb30c584e18cf1f44"
+        },
+        "date": 1694539650322,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "WebMercator data_transferred",
+            "value": 5.29,
+            "unit": "Megabytes"
+          },
+          {
+            "name": "WebMercator response_time",
+            "value": 0.04,
+            "unit": "s"
+          },
+          {
+            "name": "WebMercator longest_transaction",
+            "value": 0.07,
+            "unit": "s"
+          },
+          {
+            "name": "WGS1984Quad elapsed_time",
+            "value": 5.68,
+            "unit": "s"
+          },
+          {
+            "name": "WGS1984Quad data_transferred",
+            "value": 5.18,
+            "unit": "Megabytes"
+          },
+          {
+            "name": "WGS1984Quad response_time",
+            "value": 0.06,
+            "unit": "s"
+          },
+          {
+            "name": "WGS1984Quad longest_transaction",
+            "value": 0.07,
             "unit": "s"
           }
         ]
