@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1694539804732,
+  "lastUpdate": 1696339361849,
   "repoUrl": "https://github.com/Element84/titiler-mosaicjson",
   "entries": {
     "TiTiler performance Benchmarks": [
@@ -1282,6 +1282,65 @@ window.BENCHMARK_DATA = {
           {
             "name": "WGS1984Quad elapsed_time",
             "value": 5.62,
+            "unit": "s"
+          },
+          {
+            "name": "WGS1984Quad data_transferred",
+            "value": 5.18,
+            "unit": "Megabytes"
+          },
+          {
+            "name": "WGS1984Quad response_time",
+            "value": 0.06,
+            "unit": "s"
+          },
+          {
+            "name": "WGS1984Quad longest_transaction",
+            "value": 0.07,
+            "unit": "s"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "pvarner@element84.com",
+            "name": "Phil Varner",
+            "username": "philvarner"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "40665d68efc8bb170c12ada22d3fc71ad0ff0288",
+          "message": "Merge pull request #27 from Element84/pv/fix-pydantic-warnings\n\nfix pydantic warnings",
+          "timestamp": "2023-10-03T09:21:03-04:00",
+          "tree_id": "f03a13d4aebdaae7078c05ed80ff55610965e315",
+          "url": "https://github.com/Element84/titiler-mosaicjson/commit/40665d68efc8bb170c12ada22d3fc71ad0ff0288"
+        },
+        "date": 1696339360964,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "WebMercator data_transferred",
+            "value": 5.29,
+            "unit": "Megabytes"
+          },
+          {
+            "name": "WebMercator response_time",
+            "value": 0.04,
+            "unit": "s"
+          },
+          {
+            "name": "WebMercator longest_transaction",
+            "value": 0.07,
+            "unit": "s"
+          },
+          {
+            "name": "WGS1984Quad elapsed_time",
+            "value": 5.67,
             "unit": "s"
           },
           {
