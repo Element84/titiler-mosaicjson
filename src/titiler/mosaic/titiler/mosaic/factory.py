@@ -1039,7 +1039,7 @@ class MosaicTilerFactory(BaseTilerFactory):
                             colormap,
                             pixel_selection,
                             reader_params,
-                            rescale
+                            rescale,
                         ),
                         30,  # todo: ???
                     )
@@ -1170,7 +1170,7 @@ class MosaicTilerFactory(BaseTilerFactory):
             colormap,
             pixel_selection: PixelSelectionMethod,
             reader_params,
-            rescale
+            rescale,
         ) -> Tuple[bytes, Any, ImageType, List[Tuple[str, float]]]:
             """Create map tile from a COG."""
             timings = []
