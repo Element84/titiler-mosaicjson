@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1696423205700,
+  "lastUpdate": 1696435049023,
   "repoUrl": "https://github.com/Element84/titiler-mosaicjson",
   "entries": {
     "TiTiler performance Benchmarks": [
@@ -1577,6 +1577,65 @@ window.BENCHMARK_DATA = {
           {
             "name": "WGS1984Quad elapsed_time",
             "value": 7.09,
+            "unit": "s"
+          },
+          {
+            "name": "WGS1984Quad data_transferred",
+            "value": 5.18,
+            "unit": "Megabytes"
+          },
+          {
+            "name": "WGS1984Quad response_time",
+            "value": 0.07,
+            "unit": "s"
+          },
+          {
+            "name": "WGS1984Quad longest_transaction",
+            "value": 0.09,
+            "unit": "s"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "pvarner@element84.com",
+            "name": "Phil Varner",
+            "username": "philvarner"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "ac73de9e0ac8efaf2d2f525656b498ad5e91fa8e",
+          "message": "install pystac[validation] for >=1.8.4 for tests, as to include jsonschema lib (#29)\n\n* install pystac[validation] for >=1.8.4 for tests, as to include jsonschema lib\r\n\r\n* fix(tests): depend on pystac, not jsonschema\r\n\r\n---------\r\n\r\nCo-authored-by: Pete Gadomski <pete.gadomski@gmail.com>",
+          "timestamp": "2023-10-04T11:55:20-04:00",
+          "tree_id": "44b6ff58aee1e7634825156f05d73eb18f8a58ac",
+          "url": "https://github.com/Element84/titiler-mosaicjson/commit/ac73de9e0ac8efaf2d2f525656b498ad5e91fa8e"
+        },
+        "date": 1696435047783,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "WebMercator data_transferred",
+            "value": 5.29,
+            "unit": "Megabytes"
+          },
+          {
+            "name": "WebMercator response_time",
+            "value": 0.04,
+            "unit": "s"
+          },
+          {
+            "name": "WebMercator longest_transaction",
+            "value": 0.09,
+            "unit": "s"
+          },
+          {
+            "name": "WGS1984Quad elapsed_time",
+            "value": 7.35,
             "unit": "s"
           },
           {
