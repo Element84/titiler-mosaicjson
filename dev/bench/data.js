@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1696421715089,
+  "lastUpdate": 1696423205700,
   "repoUrl": "https://github.com/Element84/titiler-mosaicjson",
   "entries": {
     "TiTiler performance Benchmarks": [
@@ -1533,6 +1533,65 @@ window.BENCHMARK_DATA = {
           {
             "name": "WGS1984Quad longest_transaction",
             "value": 0.08,
+            "unit": "s"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "pvarner@element84.com",
+            "name": "Phil Varner",
+            "username": "philvarner"
+          },
+          "committer": {
+            "email": "pvarner@element84.com",
+            "name": "Phil Varner",
+            "username": "philvarner"
+          },
+          "distinct": true,
+          "id": "e61f4ebdbfe9a457e332e79d7e664519d75ba279",
+          "message": "update changelog for 0.14.0-1.0.4 release",
+          "timestamp": "2023-10-04T08:37:58-04:00",
+          "tree_id": "59ee4d09151ea693c6300ce9aac956b289e5e499",
+          "url": "https://github.com/Element84/titiler-mosaicjson/commit/e61f4ebdbfe9a457e332e79d7e664519d75ba279"
+        },
+        "date": 1696423203859,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "WebMercator data_transferred",
+            "value": 5.29,
+            "unit": "Megabytes"
+          },
+          {
+            "name": "WebMercator response_time",
+            "value": 0.04,
+            "unit": "s"
+          },
+          {
+            "name": "WebMercator longest_transaction",
+            "value": 0.09,
+            "unit": "s"
+          },
+          {
+            "name": "WGS1984Quad elapsed_time",
+            "value": 7.09,
+            "unit": "s"
+          },
+          {
+            "name": "WGS1984Quad data_transferred",
+            "value": 5.18,
+            "unit": "Megabytes"
+          },
+          {
+            "name": "WGS1984Quad response_time",
+            "value": 0.07,
+            "unit": "s"
+          },
+          {
+            "name": "WGS1984Quad longest_transaction",
+            "value": 0.09,
             "unit": "s"
           }
         ]
