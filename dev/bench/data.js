@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1696342151410,
+  "lastUpdate": 1696421675336,
   "repoUrl": "https://github.com/Element84/titiler-mosaicjson",
   "entries": {
     "TiTiler performance Benchmarks": [
@@ -1400,6 +1400,65 @@ window.BENCHMARK_DATA = {
           {
             "name": "WGS1984Quad elapsed_time",
             "value": 5.68,
+            "unit": "s"
+          },
+          {
+            "name": "WGS1984Quad data_transferred",
+            "value": 5.18,
+            "unit": "Megabytes"
+          },
+          {
+            "name": "WGS1984Quad response_time",
+            "value": 0.06,
+            "unit": "s"
+          },
+          {
+            "name": "WGS1984Quad longest_transaction",
+            "value": 0.07,
+            "unit": "s"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "pvarner@element84.com",
+            "name": "Phil Varner",
+            "username": "philvarner"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "0d2389a63340bbfeaa61edda99bc6d1f691b4a82",
+          "message": "Merge pull request #25 from Element84/pv/FD-654-bidx\n\nre-add parameters to mosaic render_tile that were previously removed inadvertently",
+          "timestamp": "2023-10-04T08:12:56-04:00",
+          "tree_id": "23a902ffd10c5be1285aad018c6fcbfac95b7d6e",
+          "url": "https://github.com/Element84/titiler-mosaicjson/commit/0d2389a63340bbfeaa61edda99bc6d1f691b4a82"
+        },
+        "date": 1696421674392,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "WebMercator data_transferred",
+            "value": 5.29,
+            "unit": "Megabytes"
+          },
+          {
+            "name": "WebMercator response_time",
+            "value": 0.03,
+            "unit": "s"
+          },
+          {
+            "name": "WebMercator longest_transaction",
+            "value": 0.07,
+            "unit": "s"
+          },
+          {
+            "name": "WGS1984Quad elapsed_time",
+            "value": 5.52,
             "unit": "s"
           },
           {
