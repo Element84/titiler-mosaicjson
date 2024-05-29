@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1701284172378,
+  "lastUpdate": 1717006427223,
   "repoUrl": "https://github.com/Element84/titiler-mosaicjson",
   "entries": {
     "TiTiler performance Benchmarks": [
@@ -1710,6 +1710,65 @@ window.BENCHMARK_DATA = {
           {
             "name": "WGS1984Quad longest_transaction",
             "value": 0.05,
+            "unit": "s"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "pvarner@element84.com",
+            "name": "Phil Varner",
+            "username": "philvarner"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "187d5064bc2060ee67bf11aea4e90dfadced4f82",
+          "message": "mosaic tile timeout (#33)\n\n* add MOSAIC_TILE_TIMEOUT configuration\r\n* update jinja init",
+          "timestamp": "2024-05-29T14:12:12-04:00",
+          "tree_id": "e55537c3ce4bffc12dead01174d4e1bb82dc1b1b",
+          "url": "https://github.com/Element84/titiler-mosaicjson/commit/187d5064bc2060ee67bf11aea4e90dfadced4f82"
+        },
+        "date": 1717006426120,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "WebMercator data_transferred",
+            "value": 5.29,
+            "unit": "Megabytes"
+          },
+          {
+            "name": "WebMercator response_time",
+            "value": 0.03,
+            "unit": "s"
+          },
+          {
+            "name": "WebMercator longest_transaction",
+            "value": 0.06,
+            "unit": "s"
+          },
+          {
+            "name": "WGS1984Quad elapsed_time",
+            "value": 4.15,
+            "unit": "s"
+          },
+          {
+            "name": "WGS1984Quad data_transferred",
+            "value": 5.18,
+            "unit": "Megabytes"
+          },
+          {
+            "name": "WGS1984Quad response_time",
+            "value": 0.04,
+            "unit": "s"
+          },
+          {
+            "name": "WGS1984Quad longest_transaction",
+            "value": 0.06,
             "unit": "s"
           }
         ]
