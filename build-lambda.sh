@@ -25,11 +25,12 @@ python -m pip install \
   ./src/titiler/application \
   mangum==0.17.0 \
   rasterio==1.3.8 \
-  "morecantile==5.0.0" \
-  "rio-tiler==6.2.1" \
-  "cogeo-mosaic==7.0.0" \
+  morecantile==5.0.0 \
+  rio-tiler==6.2.1 \
+  cogeo-mosaic==7.0.0 \
   markupsafe==2.0.1 \
-  boto3==1.28.27
+  boto3==1.28.27 \
+  botocore==1.31.59
 
 cd lambda
 
