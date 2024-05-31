@@ -35,7 +35,7 @@ python -m pip install \
 cd lambda
 
 echo "cleaning up..."
-find . -type d -a -name '*.dist-info' -print0 | xargs -0 rm -rf
+# find . -type d -a -name '*.dist-info' -print0 | xargs -0 rm -rf
 find . -type d -a -name '__pycache__' -print0 | xargs -0 rm -rf
 find . -type d -a -name 'tests' -print0 | xargs -0 rm -rf
 find . -type d -a -name 'boto3' -print0 | xargs -0 rm -rf
